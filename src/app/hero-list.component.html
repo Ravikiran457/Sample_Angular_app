@@ -1,10 +1,53 @@
-<h2>Hero List</h2>
+<style>
+  .cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  /* Column Gap */
+  .cardList > * {
+    box-sizing: border-box;
+  }
+  .cardList > *:not(:last-child) {
+    margin-right: 32px;
+  }
+  /* Item sizing */
+  .cardListItem {
+    flex: 0 1 calc(33.3% - 32px);
+  }
 
-<p><i>Select a hero from the list to see details.</i></p>
+  .cardListItem{
+    background-color:lightsteelblue;
+    border: 1px solid #444;
+    cursor: pointer;
+  }
+  .cardListItem:hover{
+    background-color: lightslategray;
+    color: white;
+  }
+  .order-id{
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+ </style>
+ 
+<div class="center order-id">
+  <div> 
+    <label for="hero-power">Order : </label>
+    <input type="text" placeholder="Enter Order Id" for="hero-name" [(ngModel)]="hero.power"></div>
+ 
+</div>
+ <div class="cardList">
+   <ng-container *ngFor="let hero of heroes" >
+     <app-card class="cardListItem" [heroDetails]="hero" (click)="selectHero(hero)"></app-card>
+   </ng-container>
+ </div>
+<!-- <p><i>Select a hero from the list to see details.</i></p>
 <ul>
   <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
     {{hero.name}}
   </li>
-</ul>
+</ul> -->
 
 <app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail>

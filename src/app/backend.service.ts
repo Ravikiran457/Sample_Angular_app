@@ -4,9 +4,12 @@ import { Logger } from './logger.service';
 import { Hero } from './hero';
 
 const HEROES = [
-        new Hero('Windstorm', 'Weather mastery'),
-        new Hero('Dr Nice', 'Killing them with kindness'),
-        new Hero('Magneta', 'Manipulates metallic objects')
+        new Hero('Total No. of Orders Submitted', '1'),
+        new Hero('Residential Customer', '2'),
+        new Hero('Customer Order', '123456789'),
+        new Hero('Andel Order', '1111'),
+        new Hero('Plan Switch', 'Plan Switch'),
+        new Hero('Fulfillment', 'Fulfillment')
       ];
 
 @Injectable()

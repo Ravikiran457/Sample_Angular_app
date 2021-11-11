@@ -8,6 +8,7 @@ import { SalesTaxComponent } from './sales-tax.component';
 import { HeroService } from './hero.service';
 import { BackendService } from './backend.service';
 import { Logger } from './logger.service';
+import { AppCardComponent } from './app-card/app-card.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { Logger } from './logger.service';
     AppComponent,
     HeroDetailComponent,
     HeroListComponent,
-    SalesTaxComponent
+    SalesTaxComponent,
+    AppCardComponent
   ],
   providers: [
     BackendService,

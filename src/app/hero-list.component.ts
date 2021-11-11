@@ -11,7 +11,7 @@ import { HeroService } from './hero.service';
 export class HeroListComponent implements OnInit {
   heroes: Hero[] = [];
   selectedHero: Hero | undefined;
-
+  hero={power:''};
   constructor(private service: HeroService) { }
 
   ngOnInit() {

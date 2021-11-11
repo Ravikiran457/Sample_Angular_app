@@ -6,7 +6,7 @@ import { TaxRateService } from './tax-rate.service';
 @Component({
   selector:    'app-sales-tax',
   template: `
-    <h2>Sales Tax Calculator</h2>
+    <h2>Order Details :</h2>
     <p><i>Enter a number and press enter to calculate tax.</i></p>
     <label for="amount-input">Amount: </label>
     <input type="text" id="amount-input" #amountBox (change)="0">
